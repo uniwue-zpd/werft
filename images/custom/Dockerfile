@@ -1,4 +1,4 @@
-FROM smwcore
+FROM uniwuezpd/smw_core:latest
 
 MAINTAINER Maximilian Nöth maximilian.noeth@uni-wuerzburg.de
 
