@@ -1,1 +1,0 @@
-php maintenance/update.php
