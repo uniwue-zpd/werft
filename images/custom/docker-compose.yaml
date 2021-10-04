@@ -4,7 +4,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    image: "uniwuezpd/smw:${SMW_TAG}"
+    image: "uniwuezpd/smw:${IMAGE_TAG}"
     restart: always
     ports:
       - "${SMW_PORT}:80"
@@ -14,7 +14,7 @@ services:
       - wiki-images:/var/www/html/images
       # After initial setup, download LocalSettings.php to this repo and uncomment the following line
       # use docker-compose to restart the mediawiki service
-      - ./LocalSettings.php:/var/www/html/LocalSettings.php:ro
+      # - ./LocalSettings.php:/var/www/html/LocalSettings.php:ro
   database:
     image: mariadb:latest
     restart: always
