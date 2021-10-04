@@ -1,0 +1,9 @@
+{
+  "require": {
+    "mediawiki/page-forms": "^5.2.1",
+    "mediawiki/semantic-cite": "~2.1",
+    "mediawiki/semantic-compound-queries": "~2.1",
+    "mediawiki/semantic-result-formats": "~3.1",
+    "mediawiki/maps": "~8.0"
+  }
+}

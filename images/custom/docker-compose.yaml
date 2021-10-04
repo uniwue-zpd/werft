@@ -1,0 +1,27 @@
+version: '3'
+services:
+  smw:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: smw
+    restart: always
+    ports:
+      - "5555:80"
+    links:
+      - database
+    volumes:
+      - wiki-images:/var/www/html/images
+      # After initial setup, download LocalSettings.php to this repo and uncomment the following line
+      # use docker-compose to restart the mediawiki service
+      - ./LocalSettings.php:/var/www/html/LocalSettings.php:ro
+  database:
+    image: mariadb:latest
+    restart: always
+    environment:
+      MYSQL_DATABASE: my_wiki
+      MYSQL_USER: wikiuser
+      MYSQL_PASSWORD: example
+      MYSQL_RANDOM_ROOT_PASSWORD: 'yes'
+volumes:
+  wiki-images:

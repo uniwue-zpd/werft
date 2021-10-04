@@ -11,6 +11,6 @@ RUN apt-get install -y zip unzip wget
 
 COPY --from=composer /usr/bin/composer /usr/bin/composer
 
-### Install Semantic MediaWiki
-WORKDIR cd /var/www/html
-RUN composer require mediawiki/semantic-media-wiki "3.2.3"
+COPY composer.local.json .
+RUN composer update --no-dev
+RUN rm composer.local.json

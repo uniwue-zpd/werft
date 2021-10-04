@@ -1,3 +1,4 @@
 /.idea/
 *.env
 !/images/custom/template.env
+*/LocalSettings.php
