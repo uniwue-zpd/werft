@@ -1,5 +1,4 @@
-# TODO: Change on release to Dockerhub address
-FROM smwbase
+FROM uniwuezpd/smw_base:latest
 
 # Install core extensions via composer
 COPY composer.local.json .
