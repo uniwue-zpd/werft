@@ -1,2 +1,2 @@
-# SMWD – Semantic MediaWiki (with) Docker
+# SMWD – Semantic MediaWiki with Docker
 Work in progress!
