@@ -15,9 +15,13 @@ RUN unzip -q /tmp/SemanticDrilldown.zip -d /var/www/html/extensions
 WORKDIR /var/www/html/extensions
 RUN git clone https://gerrit.wikimedia.org/r/mediawiki/extensions/DataTransfer
 ## Arrays
-RUN wget -O /tmp/SemanticDrilldown.zip \
+RUN wget -O /tmp/Arrays.tar.gz \
     https://extdist.wmflabs.org/dist/extensions/Arrays-REL1_35-8e95888.tar.gz
-RUN tar -xzf Arrays-REL1_35-8e95888.tar.gz -C /var/www/mediawiki/extensions
+RUN tar -xzf Arrays.tar.gz -C /var/www/mediawiki/extensions
+## RegexFunctions
+RUN wget -O /tmp/RegexFunctions.tar.gz \
+    https://extdist.wmflabs.org/dist/extensions/RegexFunctions-REL1_35-3de8a80.tar.gz
+RUN tar -xzf RegexFunctions.tar.gz -C /var/www/mediawiki/extensions
 
 # Clear tmp files
 RUN rm -r /tmp/*
