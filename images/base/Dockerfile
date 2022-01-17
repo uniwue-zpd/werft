@@ -1,6 +1,8 @@
 ################################################################################################################
 ##### Base image which build on top of the official MediaWiki-Docker Image and installs Semantic MediaWiki #####
 ################################################################################################################
+
+# Latest stable release according to https://www.mediawiki.org/wiki/Version_lifecycle (as of 17.01.2022)
 FROM mediawiki:1.35
 
 LABEL vendor='Zentrum für Philologie und Digitalität "Kallimachos"' \
