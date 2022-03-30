@@ -3,7 +3,7 @@
 ################################################################################################################
 
 # Latest stable release according to https://www.mediawiki.org/wiki/Version_lifecycle (as of 17.01.2022)
-FROM mediawiki:1.35
+FROM mediawiki:1.35.5
 
 LABEL vendor='Zentrum für Philologie und Digitalität "Kallimachos"' \
       maintainer='Maximilian Nöth <maximilian.noeth@uni-wuerzburg.de>'
