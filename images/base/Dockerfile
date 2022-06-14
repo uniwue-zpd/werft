@@ -3,6 +3,7 @@
 ################################################################################################################
 
 # Latest stable release according to https://www.mediawiki.org/wiki/Version_lifecycle (as of 17.01.2022)
+# LTS EOL September 2023
 FROM mediawiki:1.35.5
 
 LABEL vendor='Zentrum für Philologie und Digitalität "Kallimachos"' \
