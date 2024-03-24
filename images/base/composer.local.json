@@ -1,5 +1,12 @@
 {
+  "config": {
+    "preferred-install": "source",
+    "optimize-autoloader": true,
+    "allow-plugins": {
+      "composer/installers": true
+    }
+  },
   "require": {
-    "mediawiki/semantic-media-wiki": "~4.0"
+    "mediawiki/semantic-media-wiki": "4.1.3"
   }
 }

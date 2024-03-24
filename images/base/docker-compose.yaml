@@ -4,4 +4,6 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    image: uniwuezpd/smw_base
+      args:
+        TAG: ${VERSION}
+    image: "uniwuezpd/smw-base:${VERSION}"
