@@ -1,0 +1,2 @@
+*/5 * * * * php /var/www/html/maintenance/runJobs.php
+0 2,8,14,20 * * * php /var/www/html/extensions/SemanticMediaWiki/maintenance/rebuildData.php -d 50
