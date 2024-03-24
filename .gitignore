@@ -1,5 +1,5 @@
 /.idea/
-*.env
+/images/custom/.env
 !/images/custom/template.env
 */LocalSettings.php
 /docs/node_modules/
