@@ -2,6 +2,7 @@ ARG TAG=latest
 
 FROM mariadb:${TAG}
 
+## Update system and install cron
 RUN apt-get update
 RUN apt-get install -y cron
 
