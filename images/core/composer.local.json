@@ -7,7 +7,7 @@
     }
   },
   "require": {
-    "mediawiki/page-forms": "^5.7",
+    "mediawiki/page-forms": "^5.7.1",
     "mediawiki/semantic-compound-queries": "2.2.0",
     "mediawiki/semantic-result-formats": "~4.2",
     "mediawiki/semantic-scribunto": "~2.2",

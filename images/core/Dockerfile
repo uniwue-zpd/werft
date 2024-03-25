@@ -7,7 +7,6 @@ FROM uniwuezpd/smw-base:${TAG}
 ## Data Transfer
 WORKDIR /var/www/html/extensions
 RUN git clone -b REL1_39 https://gerrit.wikimedia.org/r/mediawiki/extensions/DataTransfer
-RUN git clone -b REL1_39 https://gerrit.wikimedia.org/r/mediawiki/extensions/PageForms.git
 ## Semantic Drilldown
 WORKDIR /tmp/
 RUN wget -O SemanticDrilldown.zip \
