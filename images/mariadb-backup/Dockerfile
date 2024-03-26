@@ -6,14 +6,12 @@ FROM mariadb:${TAG}
 RUN apt-get update
 RUN apt-get install -y cron
 
-## Create backup directory
+## Create necessary file and directory structure
 RUN mkdir -p /backup
+RUN chmod 777 /backup
+RUN touch /mysql_backup.log
+RUN chmod 666 /mysql_backup.log
 
 ## Copy scripts
 ADD scripts /scripts
-
-## Copy crontab
-RUN echo "01 01 * * * sh /scripts/backup.sh" > /etc/cron.d/smw-cron
-RUN chmod 0644 /etc/cron.d/smw-cron
-RUN crontab /etc/cron.d/smw-cron
-RUN touch /var/log/cron.log
+RUN chmod 755 /scripts/*
