@@ -16,7 +16,7 @@ services:
       - ./wiki-images:/var/www/html/images
       # After initial setup, download LocalSettings.php to this repo and uncomment the following line
       # use docker-compose to restart the mediawiki service
-      - ./LocalSettings.php:/var/www/html/LocalSettings.php:ro
+      # - ./LocalSettings.php:/var/www/html/LocalSettings.php:ro
     depends_on:
       - database
   smw-cron:
@@ -27,7 +27,7 @@ services:
       - ./backup:/backup
       # After initial setup, download LocalSettings.php to this repo and uncomment the following line
       # use docker-compose to restart the mediawiki service
-      - ./LocalSettings.php:/var/www/html/LocalSettings.php
+      # - ./LocalSettings.php:/var/www/html/LocalSettings.php
     depends_on:
       - smw
     entrypoint: ["cron", "-f"]
