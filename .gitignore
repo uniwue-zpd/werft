@@ -5,7 +5,7 @@
 /images/custom/*
 !/images/custom/composer.local.json
 !/images/custom/crontab
-!/images/custom/scripts/*
+!/images/custom/scripts
 !/images/custom/docker-compose.template.yaml
 !/images/custom/Dockerfile.template
 !/images/custom/template.env
