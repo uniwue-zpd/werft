@@ -4,22 +4,13 @@ FROM uniwuezpd/smw-core:${TAG}
 
 MAINTAINER Maximilian Nöth maximilian.noeth@uni-wuerzburg.de
 
-
-# Install additional dependencies (if necessary)
+# Install additional dependencies via archive download (if necessary)
 WORKDIR /tmp
-## SemanticACL
-RUN wget -O SemanticACL.tar.gz \
-  https://extdist.wmflabs.org/dist/extensions/SemanticACL-REL1_39-1392e69.tar.gz
-RUN tar -xzf SemanticACL.tar.gz -C /var/www/html/extensions
-RUN rm -r SemanticACL.tar.gz
-## Workflows
-RUN wget -O Workflows.tar.gz \
-    https://extdist.wmflabs.org/dist/extensions/Workflows-REL1_39-84de375.tar.gz
-RUN tar -xzf Workflows.tar.gz -C /var/www/html/extensions
-RUN rm -r Workflows.tar.gz
 
 ## Install extensions with git
-WORKDIR /var/www/html/
+WORKDIR /var/www/html/extensions
+RUN git clone -b REL1_39 https://github.com/wikimedia/mediawiki-extensions-SemanticACL SemanticACL
+RUN git clone -b REL1_39 https://github.com/wikimedia/mediawiki-extensions-Workflows Workflows
 
 ## Copy crontab
 COPY crontab /etc/cron.d/smw-cron

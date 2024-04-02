@@ -1,9 +1,0 @@
-version: '3'
-services:
-  backup:
-    build:
-      context: .
-      dockerfile: Dockerfile
-      args:
-        TAG: ${VERSION}
-    image: "uniwuezpd/mariadb-backup:${VERSION}"

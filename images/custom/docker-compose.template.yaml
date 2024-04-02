@@ -13,10 +13,10 @@ services:
     links:
       - database
     volumes:
-      - wiki-images:/var/www/html/images
+      - ./wiki-images:/var/www/html/images
       # After initial setup, download LocalSettings.php to this repo and uncomment the following line
       # use docker-compose to restart the mediawiki service
-      # - ./LocalSettings.php:/var/www/html/LocalSettings.php:ro
+      - ./LocalSettings.php:/var/www/html/LocalSettings.php:ro
     depends_on:
       - database
   smw-cron:
@@ -24,10 +24,10 @@ services:
     links:
       - database
     volumes:
-      - wiki-images:/var/www/html/images
+      - ./backup:/backup
       # After initial setup, download LocalSettings.php to this repo and uncomment the following line
       # use docker-compose to restart the mediawiki service
-      # - ./LocalSettings.php:/var/www/html/LocalSettings.php:ro
+      - ./LocalSettings.php:/var/www/html/LocalSettings.php
     depends_on:
       - smw
     entrypoint: ["cron", "-f"]
@@ -39,7 +39,7 @@ services:
       MYSQL_PASSWORD: "${DB_PASSWORD}"
       MYSQL_RANDOM_ROOT_PASSWORD: 'yes'
     volumes:
-      - ./database:/var/lib/mysql
+      - ./db_data:/var/lib/mysql
   database-backup:
     image: uniwuezpd/mariadb-backup:11.1.4
     environment:
@@ -47,12 +47,10 @@ services:
       MYSQL_USER: "${DB_USER}"
       MYSQL_PASSWORD: "${DB_PASSWORD}"
       MYSQL_RANDOM_ROOT_PASSWORD: 'yes'
-    entrypoint: ["cron", "-f"]
+      CRON_INTERVAL: "*/1 * * * *"
+    entrypoint: [ "sh", "/scripts/run.sh" ]
     volumes:
-      - ./database:/var/lib/mysql
+      - ./db_data:/var/lib/mysql
       - ./backup:/backup
     depends_on:
       - database
-
-volumes:
-  wiki-images:
