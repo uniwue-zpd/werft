@@ -11,5 +11,6 @@
 !/images/custom/template.env
 
 /images/mariadb-backup/*
+!/images/mariadb-backup/scripts
 !/images/mariadb-backup/docker-compose.template.yaml
 !/images/mariadb-backup/Dockerfile
