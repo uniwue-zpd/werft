@@ -9,8 +9,6 @@ WORKDIR /tmp
 
 ## Install extensions with git
 WORKDIR /var/www/html/extensions
-RUN git clone -b REL1_39 https://github.com/wikimedia/mediawiki-extensions-SemanticACL SemanticACL
-RUN git clone -b REL1_39 https://github.com/wikimedia/mediawiki-extensions-Workflows Workflows
 
 ## Copy crontab
 COPY crontab /etc/cron.d/smw-cron
