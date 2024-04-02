@@ -7,7 +7,7 @@
 !/images/custom/crontab
 !/images/custom/scripts/*
 !/images/custom/docker-compose.template.yaml
-!/images/custom/Dockerfile
+!/images/custom/Dockerfile.template
 !/images/custom/template.env
 
 /images/mariadb-backup/*
