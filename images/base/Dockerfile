@@ -43,6 +43,8 @@ RUN { \
 		echo 'opcache.revalidate_freq=60'; \
 	} > /usr/local/etc/php/conf.d/opcache-recommended.inis
 
+RUN touch /wiki-debug.log
+
 WORKDIR /var/www/html
 
 # Install base extensions
