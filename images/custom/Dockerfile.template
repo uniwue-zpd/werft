@@ -10,6 +10,10 @@ WORKDIR /tmp
 ## Install extensions with git
 WORKDIR /var/www/html/extensions
 
+## Copy scripts
+ADD scripts /scripts
+RUN chmod 755 /scripts/*
+
 ## Copy crontab
 COPY crontab /etc/cron.d/smw-cron
 RUN chmod 0644 /etc/cron.d/smw-cron
@@ -20,3 +24,5 @@ RUN touch /var/log/cron.log
 ## Install additional extension with composer
 COPY composer.local.json .
 RUN composer require --update-no-dev
+
+WORKDIR /var/www/html
