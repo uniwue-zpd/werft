@@ -11,13 +11,9 @@ RUN git clone -b REL1_39 https://github.com/wikimedia/mediawiki-extensions-Echo 
 RUN git clone -b REL1_39 https://github.com/wikimedia/mediawiki-extensions-LoginNotify LoginNotify
 RUN git clone -b REL1_39 https://github.com/wikimedia/mediawiki-extensions-RegexFunctions RegexFunctions
 RUN git clone -b REL1_39 https://github.com/wikimedia/mediawiki-extensions-Arrays Arrays
+RUN git clone https://github.com/SemanticMediaWiki/SemanticDrilldown SemanticDrilldown
 ## Semantic Drilldown
 WORKDIR /tmp/
-RUN wget -O SemanticDrilldown.zip \
-    https://github.com/gesinn-it-pub/mediawiki-extensions-SemanticDrilldown/archive/refs/tags/3.1.3.zip
-RUN unzip -q SemanticDrilldown.zip -d /var/www/html/extensions
-RUN mv /var/www/html/extensions/mediawiki-extensions-SemanticDrilldown-3.1.3 /var/www/html/extensions/SemanticDrilldown
-RUN rm -r SemanticDrilldown.zip
 
 # Install core extensions via composer
 WORKDIR /var/www/html
