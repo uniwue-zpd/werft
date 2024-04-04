@@ -19,6 +19,7 @@ services:
       # - ./LocalSettings.php:/var/www/html/LocalSettings.php:ro
     depends_on:
       - database
+    restart: always
   smw-cron:
     image: "uniwuezpd/${IMAGE_NAME}:${IMAGE_TAG}"
     links:
@@ -30,6 +31,7 @@ services:
       # - ./LocalSettings.php:/var/www/html/LocalSettings.php
     depends_on:
       - smw
+    restart: always
     entrypoint: ["cron", "-f"]
   database:
     image: mariadb:11.1.4
@@ -40,6 +42,7 @@ services:
       MYSQL_RANDOM_ROOT_PASSWORD: 'yes'
     volumes:
       - ./db_data:/var/lib/mysql
+    restart: always
   database-backup:
     image: uniwuezpd/mariadb-backup:11.1.4
     environment:
@@ -54,3 +57,4 @@ services:
       - ./backup:/backup
     depends_on:
       - database
+    restart: always
