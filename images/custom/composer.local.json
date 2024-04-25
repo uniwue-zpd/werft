@@ -1,4 +1,11 @@
 {
+  "config": {
+    "preferred-install": "source",
+    "optimize-autoloader": true,
+    "allow-plugins": {
+      "composer/installers": true
+    }
+  },
   "require": {
 
   }
