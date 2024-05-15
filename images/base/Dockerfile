@@ -46,6 +46,7 @@ RUN { \
 RUN touch /wiki-debug.log
 
 WORKDIR /var/www/html
+RUN chown -R www-data:www-data /var/www/html
 
 # Install base extensions
 COPY composer.local.json .
