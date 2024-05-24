@@ -10,7 +10,6 @@ RUN git clone -b REL1_39 https://gerrit.wikimedia.org/r/mediawiki/extensions/Dat
 RUN git clone -b REL1_39 https://github.com/wikimedia/mediawiki-extensions-Echo Echo
 RUN git clone -b REL1_39 https://github.com/wikimedia/mediawiki-extensions-LoginNotify LoginNotify
 RUN git clone -b REL1_39 https://github.com/wikimedia/mediawiki-extensions-RegexFunctions RegexFunctions
-RUN git clone -b REL1_39 https://github.com/wikimedia/mediawiki-extensions-Arrays Arrays
 RUN git clone https://github.com/SemanticMediaWiki/SemanticDrilldown SemanticDrilldown
 ## Semantic Drilldown
 WORKDIR /tmp/
