@@ -42,6 +42,8 @@ services:
       MYSQL_RANDOM_ROOT_PASSWORD: 'yes'
     volumes:
       - ./db_data:/var/lib/mysql
+      # In case you want to import a database dump uncomment the following line and point to the correct path on your host
+      # - ./backup.sql:/docker-entrypoint-initdb.d/datadump.sql
     restart: always
   database-backup:
     image: uniwuezpd/mariadb-backup:11.1.4
