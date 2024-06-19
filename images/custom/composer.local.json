@@ -6,7 +6,17 @@
       "composer/installers": true
     }
   },
+  "extra": {
+    "merge-plugin": {
+      "include": [
+
+      ]
+    }
+  },
   "require": {
 
-  }
+  },
+  "repositories": [
+
+  ]
 }

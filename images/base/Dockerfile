@@ -48,6 +48,16 @@ RUN touch /wiki-debug.log
 WORKDIR /var/www/html
 RUN chown -R www-data:www-data /var/www/html
 
+USER www-data
+
 # Install base extensions
 COPY composer.local.json .
-RUN composer require --update-no-dev
+RUN composer install --no-dev \
+    --ignore-platform-reqs \
+    --no-ansi \
+    --no-interaction \
+    --no-scripts
+RUN  composer update --no-dev \
+     --no-ansi \
+     --no-interaction \
+     --no-scripts
