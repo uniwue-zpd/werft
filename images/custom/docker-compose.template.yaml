@@ -5,7 +5,7 @@ services:
       dockerfile: Dockerfile
       args:
         TAG: ${IMAGE_TAG}
-    image: "uniwuezpd/${IMAGE_NAME}:${IMAGE_TAG}"
+    image: "uniwuezpd/${SMW_IMAGE_NAME}:${SMW_IMAGE_TAG}"
     ports:
       - "127.0.0.1:${SMW_PORT}:80"
     links:
@@ -19,7 +19,7 @@ services:
       - database
     restart: always
   smw-cron:
-    image: "uniwuezpd/${IMAGE_NAME}:${IMAGE_TAG}"
+    image: "uniwuezpd/${SMW_IMAGE_NAME}:${SMW_IMAGE_TAG}"
     links:
       - database
     volumes:
@@ -50,7 +50,7 @@ services:
       MYSQL_USER: "${DB_USER}"
       MYSQL_PASSWORD: "${DB_PASSWORD}"
       MYSQL_RANDOM_ROOT_PASSWORD: 'yes'
-      CRON_INTERVAL: "*/1 * * * *"
+      CRON_INTERVAL: "${DB_BACKUP_CRON}:-00 23 * * *"
     entrypoint: [ "sh", "/scripts/run.sh" ]
     volumes:
       - ./db_data:/var/lib/mysql
