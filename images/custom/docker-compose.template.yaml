@@ -4,7 +4,7 @@ services:
       context: .
       dockerfile: Dockerfile
       args:
-        TAG: ${IMAGE_TAG}
+        TAG: ${SMW_IMAGE_TAG}
     image: "uniwuezpd/${SMW_IMAGE_NAME}:${SMW_IMAGE_TAG}"
     ports:
       - "127.0.0.1:${SMW_PORT}:80"
