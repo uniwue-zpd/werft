@@ -50,7 +50,7 @@ services:
       MYSQL_USER: "${DB_USER:?error}"
       MYSQL_PASSWORD: "${DB_PASSWORD:?error}"
       MYSQL_RANDOM_ROOT_PASSWORD: 'yes'
-      CRON_INTERVAL: "${DB_BACKUP_CRON}:-00 23 * * *"
+      CRON_INTERVAL: "${DB_BACKUP_CRON:-00 23 * * *}"
     entrypoint: [ "sh", "/scripts/run.sh" ]
     volumes:
       - ./db_data:/var/lib/mysql
