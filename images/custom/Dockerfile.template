@@ -25,4 +25,6 @@ RUN touch /var/log/cron.log
 COPY composer.local.json .
 RUN composer require --update-no-dev
 
+COPY php.ini /usr/local/etc/php/conf.d/mediawiki.ini
+
 WORKDIR /var/www/html

@@ -9,6 +9,7 @@
 !/images/custom/docker-compose.template.yaml
 !/images/custom/Dockerfile.template
 !/images/custom/template.env
+!/images/custom/php.ini
 
 /images/mariadb-backup/*
 !/images/mariadb-backup/.env
