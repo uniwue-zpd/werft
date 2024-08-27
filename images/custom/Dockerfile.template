@@ -27,4 +27,5 @@ RUN composer require --update-no-dev
 
 COPY php.ini /usr/local/etc/php/conf.d/mediawiki.ini
 
+RUN chown -R www-data:www-data /var/www/html
 WORKDIR /var/www/html
