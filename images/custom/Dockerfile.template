@@ -22,10 +22,10 @@ RUN touch /var/log/cron.log
 
 ### Update composer
 ## Install additional extension with composer
+WORKDIR /var/www/html
+RUN chown -R www-data:www-data /var/www/html
+
 COPY composer.local.json .
 RUN composer require --update-no-dev
 
 COPY php.ini /usr/local/etc/php/conf.d/mediawiki.ini
-
-RUN chown -R www-data:www-data /var/www/html
-WORKDIR /var/www/html
