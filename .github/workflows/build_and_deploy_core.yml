@@ -40,4 +40,4 @@ jobs:
           platforms: linux/amd64,linux/arm64
           context: images/core
           push: true
-          tags: uniwuezpd/smw-core:${{ VERSION }}
+          tags: uniwuezpd/smw-core:${{ env.VERSION }}
