@@ -36,7 +36,7 @@ The provided setup also adds a database backup container by default. To configur
 #### Environment variables
 The setup depends on certain environment variables being set for building the images and running the containers.
 
-Move the `template.env` file to a `.env` file in the same directory and set the following environment variables:
+Move the `template.env` file to a file called `.env` (if you want to use a different filename you have to specifiy this in the docker-compose call with the `--env-file` argument) in the same directory and set the following environment variables:
 ##### Semantic MediaWiki
 - `SMW_IMAGE_NAME`: Desired name for the custom image (**required**)
 - `SMW_IMAGE_TAG`: Desired tag for the custom image (**required**)
