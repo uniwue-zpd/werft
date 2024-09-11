@@ -39,7 +39,7 @@ The setup depends on certain environment variables being set for building the im
 Move the `template.env` file to a file called `.env` (if you want to use a different filename you have to specifiy this in the docker-compose call with the `--env-file` argument) in the same directory and set the following environment variables:
 ##### Semantic MediaWiki
 - `SMW_IMAGE_NAME`: Desired name for the custom image (**required**)
-- `SMW_IMAGE_TAG`: Desired tag for the custom image (**required**)
+- `SMW_IMAGE_TAG`: Specifies the core image tag that should get used for building (default: `1.39.7`) 
 - `SMW_PORT`: Port through which the MediaWiki should be available (default: `8080`)
 ##### Database
 - `DB_NAME`: Name of the database that gets used by (Semantic) MediaWiki (**required**)
