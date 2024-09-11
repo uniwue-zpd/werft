@@ -11,13 +11,4 @@ WORKDIR /tmp/
 
 # Install core extensions via composer
 WORKDIR /var/www/html
-COPY composer.local.json .
-RUN composer install --no-dev \
-    --ignore-platform-reqs \
-    --no-ansi \
-    --no-interaction \
-    --no-scripts
-RUN  composer update --no-dev \
-     --no-ansi \
-     --no-interaction \
-     --no-scripts
+COPY core.composer.local.json .

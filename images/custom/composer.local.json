@@ -9,7 +9,8 @@
   "extra": {
     "merge-plugin": {
       "include": [
-
+        "base.composer.local.json",
+        "core.composer.local.json"
       ]
     }
   },
