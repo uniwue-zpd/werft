@@ -1,4 +1,4 @@
-name: Read .env and Set Environment Variables
+name: Build and Push Docker image for the base image
 
 on:
   workflow_dispatch:
