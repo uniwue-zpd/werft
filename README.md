@@ -1,17 +1,15 @@
 # werft
 
-This repository contains the containerized hosting architecture and all maintenance scripts for Semantic MediaWiki instances developed and / or hosted at the [ZPD](https://github.com/uniwue-zpd).
-The goal of this project is providing a production ready, opinionated but extensible environment for hosting a wide array of isolated Semantic MediaWiki instances while also keeping the necessary boilerplate and maintenance work at a minimum.
-This is achieved by leveraging a hierarchy of Docker images which gradually range from a bare-bones Semantic MediaWiki environment at the base level to an optional, highly customized Docker image, all the while building on top of each other and therefore reducing the workload for keeping multiple instances up-to-date.
+This repository contains the containerized hosting architecture and maintenance scripts for Semantic MediaWiki instances developed or hosted at the [ZPD](https://github.com/uniwue-zpd). The goal of this project is to provide a production-ready, opinionated, but extensible environment for hosting a variety of isolated Semantic MediaWiki instances, while minimizing boilerplate and maintenance work. This is achieved through a hierarchy of Docker images, starting from a bare-bones Semantic MediaWiki environment and extending to an optional, highly customized image. Each image builds upon the previous one, streamlining updates and reducing the workload for maintaining multiple instances.
 
 ## Getting Started
 
-These instructions will get you your own Semantic MediaWiki instance up and running on your local machine for development and testing purposes. The deployment process can differ based on your available infrastructure but the underyling processes stay the same.
+These instructions will help you set up a Semantic MediaWiki instance on your local machine for development and testing. While the deployment process may vary depending on your infrastructure, the underlying steps remain the same.
 
 ### Prerequisites
 
-* Install Docker and Docker Compose
-* Clone the whole repository 
+* Install [Docker](https://docs.docker.com/get-started/get-docker/) and [Docker Compose](https://docs.docker.com/compose/install/)
+* Clone the whole repository and navigate to the `custom` directory
 
 ### Configuration
 #### Dockerfile
