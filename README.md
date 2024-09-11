@@ -1,4 +1,4 @@
-# werft – Semantic MediaWiki with Docker
+# werft
 
 This repository contains the containerized hosting architecture and all maintenance scripts for Semantic MediaWiki instances developed and / or hosted at the [ZPD](https://github.com/uniwue-zpd).
 The goal of this project is providing a production ready, opinionated but extensible environment for hosting a wide array of isolated Semantic MediaWiki instances while also keeping the necessary boilerplate and maintenance work at a minimum.
