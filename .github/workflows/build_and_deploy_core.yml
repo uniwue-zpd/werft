@@ -39,5 +39,7 @@ jobs:
         with:
           platforms: linux/amd64,linux/arm64
           context: images/core
+          build-args: |
+            VERSION=${{ env.VERSION }}
           push: true
           tags: uniwuezpd/smw-core:${{ env.VERSION }}
