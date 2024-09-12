@@ -22,13 +22,6 @@
     "mediawiki/code-mirror": "1.39.0",
     "mediawiki/wiki-seo": "1.39.0"
   },
-  "extra": {
-    "merge-plugin": {
-      "include": [
-
-      ]
-    }
-  },
   "repositories": [
     {
       "type": "package",
