@@ -10,7 +10,8 @@
     "merge-plugin": {
       "include": [
         "base.composer.local.json",
-        "core.composer.local.json"
+        "core.composer.local.json",
+        "extensions/AbuseFilter/composer.json"
       ]
     }
   },
