@@ -18,6 +18,7 @@ services:
     depends_on:
       - database
     restart: always
+    entrypoint: ["runWiki"]
   smw-cron:
     image: "uniwuezpd/${SMW_IMAGE_NAME:?error}:${SMW_IMAGE_TAG:?error}"
     links:

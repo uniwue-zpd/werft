@@ -12,8 +12,8 @@ WORKDIR /tmp
 WORKDIR /var/www/html/extensions
 
 ## Copy scripts
-ADD scripts /scripts
-RUN chmod 755 /scripts/*
+ADD scripts /usr/local/bin
+RUN chmod 755 /usr/local/bin/*
 
 ## Copy crontab
 COPY crontab /etc/cron.d/smw-cron
