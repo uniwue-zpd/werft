@@ -9,7 +9,7 @@ These instructions will help you set up a Semantic MediaWiki instance on your lo
 ### Prerequisites
 
 * Install [Docker](https://docs.docker.com/get-started/get-docker/) and [Docker Compose](https://docs.docker.com/compose/install/)
-* Clone the whole repository and navigate to the `custom` directory
+* Download a [release of the custom image](https://github.com/uniwue-zpd/werft/releases) **or** clone the whole repository and navigate to the `custom` directory
 
 ### Configuration
 #### Dockerfile
