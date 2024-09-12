@@ -2,7 +2,8 @@ ARG TAG=latest
 
 FROM uniwuezpd/smw-core:${TAG}
 
-MAINTAINER Maximilian Nöth maximilian.noeth@uni-wuerzburg.de
+LABEL vendor='Zentrum für Philologie und Digitalität "Kallimachos"' \
+      maintainer='Maximilian Nöth <maximilian.noeth@uni-wuerzburg.de>'
 
 # Install additional dependencies via archive download (if necessary)
 WORKDIR /tmp
