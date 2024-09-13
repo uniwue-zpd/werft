@@ -17,8 +17,3 @@
 !/images/mariadb-backup/docker-compose.template.yaml
 !/images/mariadb-backup/Dockerfile
 
-/cli/*
-!/cli/go.mod
-!/cli/go.sum
-!/cli/main.go
-
