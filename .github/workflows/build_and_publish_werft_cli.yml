@@ -18,17 +18,17 @@ jobs:
       - uses: wangyoucao577/go-release-action@v1
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          project_path: /cli
+          project_path: ./cli
           goos: linux
           goarch: amd64
   release-linux-arm64:
     name: release darwin/arm64
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: wangyoucao577/go-release-action@v1
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          project_path: /cli
+          project_path: ./cli
           goos: darwin
           goarch: arm64
