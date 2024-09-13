@@ -1,7 +1,6 @@
 name: Build and publish werft cli
 
 on:
-  workflow_dispatch:
   release:
     types: [created]
 
