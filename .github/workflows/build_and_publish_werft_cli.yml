@@ -18,6 +18,7 @@ jobs:
       - uses: wangyoucao577/go-release-action@v1
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
+          project_path: /cli
           goos: linux
           goarch: amd64
   release-linux-arm64:
@@ -28,5 +29,6 @@ jobs:
       - uses: wangyoucao577/go-release-action@v1
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
+          project_path: /cli
           goos: darwin
           goarch: arm64
