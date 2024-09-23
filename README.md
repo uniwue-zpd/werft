@@ -9,14 +9,18 @@ These instructions will help you set up a Semantic MediaWiki instance on your lo
 ### Prerequisites
 
 * Install [Docker](https://docs.docker.com/get-started/get-docker/) and [Docker Compose](https://docs.docker.com/compose/install/)
-* Download a [release of the custom image](https://github.com/uniwue-zpd/werft/releases) **or** clone the whole repository and navigate to the `custom` directory
+* Create the scaffolding for your own Semantic MediaWiki instance by using the [werft-cli](https://github.com/uniwue-zpd/werft-cli) **or** download a [release of the custom image](https://github.com/uniwue-zpd/werft/releases)
+* In case you choose the latter installation option, keep in mind that you have to manually rename some of the setup files to make things work (the CLI does this automatically for you). The required replacements are
+    * `Dockerfile.template` ➡️ `Dockerfile`
+    * `docker-compose.template.yaml` ➡️ `docker-compose.yaml`
+    * `template.env` ➡️ `.env`
 
 ### Configuration
 #### Dockerfile
-Copy the `Dockerfile.template` to a file called `Dockerfile` in the same directory.
 Adapt the Dockerfile to your own likings by adding installation instructions for additional skins or extensions.
 
-Alternatively – and recommended – you can also do this by adding the skins or extensions to the `composer.local.json`. To find out how to do this and how to add custom repositories you can have a look [here](https://github.com/uniwue-zpd/werft/blob/main/images/core/core.composer.local.json).
+Alternatively – and recommended – you can also do this by adding the skins or extensions to the `composer.local.json`.
+To find out how to do this and how to add custom repositories you can have a look [here](https://github.com/uniwue-zpd/werft/blob/main/images/core/core.composer.local.json).
 
 #### PHP
 To overwrite the initial PHP configuration or to add additional configurations just add them to the `php.ini` file.
@@ -35,8 +39,7 @@ The provided setup also adds a database backup container by default. To configur
 
 #### Environment variables
 The setup depends on certain environment variables being set for building the images and running the containers.
-
-Move the `template.env` file to a file called `.env` (if you want to use a different filename you have to specifiy this in the docker-compose call with the `--env-file` argument) in the same directory and set the following environment variables:
+Adjust the `.env` to match your desired configuration (if you want to use a different filename you have to specifiy this in the docker-compose call with the `--env-file` argument)
 ##### Semantic MediaWiki
 - `SMW_IMAGE_NAME`: Desired name for the custom image (**required**)
 - `SMW_IMAGE_TAG`: Specifies the core image tag that should get used for building (default: `1.39.7`) 
@@ -51,8 +54,7 @@ Move the `template.env` file to a file called `.env` (if you want to use a diffe
 - `DB_BACKUP_CRON`: cron schedule expression which controls how often a database dump is created (default: `00 23 * * *`)
 
 #### Docker Compose
-Copy the `docker-compose.template.yaml` to a file called `docker-compose.yaml` in the same directory.
-Adjust the volumes if you want to.
+Adjust the volumes in the `docker-compose.yaml` to match your local storage locations or add further custom volumes (e. g. for custom layouts when using the `chameleon` skin) 
 
 If you don't want to start an instance from scratch but from the backup of an existing (Semantic) MediaWiki instance make sure to uncomment the following line in the `database` service and point the volume declaration to your backup file
 ```
