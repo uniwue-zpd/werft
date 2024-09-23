@@ -20,7 +20,8 @@
     "mediawiki/regex-functions": "1.39.0",
     "mediawiki/echo": "1.39.0",
     "mediawiki/code-mirror": "1.39.0",
-    "mediawiki/wiki-seo": "1.39.0"
+    "mediawiki/wiki-seo": "1.39.0",
+    "mediawiki/VEForAll": "1.39.0"
   },
   "repositories": [
     {
@@ -36,6 +37,23 @@
         "source": {
           "type": "git",
           "url": "https://github.com/wikimedia/mediawiki-extensions-DataTransfer.git",
+          "reference": "REL1_39"
+        }
+      }
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "mediawiki/VEForAll",
+        "type": "mediawiki-extension",
+        "version": "1.39.0",
+        "dist": {
+          "url": "https://github.com/wikimedia/mediawiki-extensions-VEForAll/archive/REL1_39.zip",
+          "type": "zip"
+        },
+        "source": {
+          "type": "git",
+          "url": "https://github.com/wikimedia/mediawiki-extensions-VEForAll.git",
           "reference": "REL1_39"
         }
       }
