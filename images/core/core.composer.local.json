@@ -21,7 +21,7 @@
     "mediawiki/echo": "1.39.0",
     "mediawiki/code-mirror": "1.39.0",
     "mediawiki/wiki-seo": "1.39.0",
-    "mediawiki/VEForAll": "1.39.0"
+    "mediawiki/VEForAll": "1.42.0"
   },
   "repositories": [
     {
@@ -46,15 +46,15 @@
       "package": {
         "name": "mediawiki/VEForAll",
         "type": "mediawiki-extension",
-        "version": "1.39.0",
+        "version": "1.42.0",
         "dist": {
-          "url": "https://github.com/wikimedia/mediawiki-extensions-VEForAll/archive/REL1_39.zip",
+          "url": "https://github.com/wikimedia/mediawiki-extensions-VEForAll/archive/REL1_42.zip",
           "type": "zip"
         },
         "source": {
           "type": "git",
           "url": "https://github.com/wikimedia/mediawiki-extensions-VEForAll.git",
-          "reference": "REL1_39"
+          "reference": "REL1_42"
         }
       }
     },
