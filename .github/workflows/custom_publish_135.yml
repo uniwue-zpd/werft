@@ -27,7 +27,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: custom-${{ steps.date.outputs.date }}
+          tag_name: 1_35-custom-${{ steps.date.outputs.date }}
           release_name: ${{ steps.date.outputs.date }}
           body: Automatically generated archive containing all files to setup a custom containerized Semantic MediaWiki instance.
           draft: false
