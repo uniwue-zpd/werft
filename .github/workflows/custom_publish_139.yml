@@ -1,5 +1,4 @@
-name: \[1.39\] \[Custom\] ZIP and Publish Custom images
-
+name: "(Custom)(1.39) ZIP and Publish Custom Images"
 on:
   workflow_dispatch:
   push:

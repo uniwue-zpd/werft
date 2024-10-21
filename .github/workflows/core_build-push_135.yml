@@ -1,5 +1,4 @@
-name: \[1.35\] \[Core\] Build and Push Docker Image to Dockerhub
-
+name: "(Core)(1.35) Build and Push Docker Image to Dockerhub"
 on:
   workflow_dispatch:
   push:
