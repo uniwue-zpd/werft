@@ -4,7 +4,7 @@
 
 # Latest stable release according to https://www.mediawiki.org/wiki/Version_lifecycle (as of 14.03.2024)
 # LTS EOL November 2025
-ARG TAG=lts
+ARG TAG=1.39
 
 FROM mediawiki:${TAG}
 
