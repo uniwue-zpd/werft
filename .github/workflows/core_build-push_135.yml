@@ -1,4 +1,4 @@
-name: Build and Push Docker image for the core image
+name: [1.35|Core] Build and Push Docker Image to Dockerhub
 
 on:
   workflow_dispatch:

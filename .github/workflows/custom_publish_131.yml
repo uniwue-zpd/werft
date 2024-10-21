@@ -1,4 +1,4 @@
-name: ZIP and Publish Custom Images
+name: [1.31|Custom] ZIP and Publish Custom Images
 
 on:
   workflow_dispatch:
