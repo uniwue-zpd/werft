@@ -16,7 +16,7 @@ jobs:
         id: dotenv
         run: |
           echo "ENV_VARS<<EOF" >> $GITHUB_OUTPUT
-          cat images/core/.env >> $GITHUB_OUTPUT
+          cat images/1.35/core/.env >> $GITHUB_OUTPUT
           echo "EOF" >> $GITHUB_OUTPUT
       - name: Set environment variables
         run: |
@@ -38,7 +38,7 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           platforms: linux/amd64,linux/arm64
-          context: images/core
+          context: images/1.35/core
           build-args: |
             TAG=${{ env.VERSION }}
           push: true

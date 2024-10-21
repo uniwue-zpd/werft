@@ -15,7 +15,7 @@ jobs:
 
       - name: Create ZIP file
         run: |
-          cd images
+          cd images/1.35
           zip -r custom.zip custom
 
       - name: Get current date
@@ -40,6 +40,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./images/custom.zip
+          asset_path: ./images/1.35/custom.zip
           asset_name: custom.zip
           asset_content_type: application/zip
