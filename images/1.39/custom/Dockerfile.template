@@ -1,0 +1,32 @@
+ARG TAG=latest
+
+FROM uniwuezpd/smw-core:${TAG}
+
+LABEL vendor='Zentrum für Philologie und Digitalität "Kallimachos"' \
+      maintainer='Maximilian Nöth <maximilian.noeth@uni-wuerzburg.de>'
+
+# Install additional dependencies via archive download (if necessary)
+WORKDIR /tmp
+
+## Install extensions with git
+WORKDIR /var/www/html/extensions
+
+## Copy scripts
+ADD scripts /usr/local/bin
+RUN chmod 755 /usr/local/bin/*
+
+## Copy crontab
+COPY crontab /etc/cron.d/smw-cron
+RUN chmod 0644 /etc/cron.d/smw-cron
+RUN crontab /etc/cron.d/smw-cron
+RUN touch /var/log/cron.log
+
+### Update composer
+## Install additional extension with composer
+WORKDIR /var/www/html
+RUN chown -R www-data:www-data /var/www/html
+
+COPY composer.local.json .
+RUN composer require --update-no-dev
+
+COPY php.ini /usr/local/etc/php/conf.d/mediawiki.ini

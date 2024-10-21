@@ -4,8 +4,8 @@ services:
       context: .
       dockerfile: Dockerfile
       args:
-        TAG: ${SMW_IMAGE_TAG:-1.39.7}
-    image: "uniwuezpd/${SMW_IMAGE_NAME:?error}:${SMW_IMAGE_TAG:?error}"
+        TAG: ${SMW_IMAGE_TAG:-1.31.15}
+    image: "uniwuezpd/${SMW_IMAGE_NAME:?error}:${SMW_IMAGE_TAG:-1.31.15}"
     ports:
       - "127.0.0.1:${SMW_PORT:-8080}:80"
     links:
@@ -20,7 +20,7 @@ services:
     restart: always
     entrypoint: ["runWiki"]
   smw-cron:
-    image: "uniwuezpd/${SMW_IMAGE_NAME:?error}:${SMW_IMAGE_TAG:?error}"
+    image: "uniwuezpd/${SMW_IMAGE_NAME:?error}:${SMW_IMAGE_TAG:-1.31.15}"
     links:
       - database
     volumes:

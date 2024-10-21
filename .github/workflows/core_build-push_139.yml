@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
   push:
     paths:
-      - 'images/core/**'
+      - 'images/1.39/core/**'
 
 jobs:
   read-env-and-run:

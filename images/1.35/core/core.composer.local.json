@@ -7,21 +7,21 @@
     }
   },
   "require": {
-    "mediawiki/page-forms": "5.7.1",
+    "mediawiki/page-forms": "4.9.4",
     "mediawiki/semantic-compound-queries": "2.2.0",
     "mediawiki/semantic-result-formats": "4.2.1",
-    "mediawiki/semantic-scribunto": "2.3.2",
+    "mediawiki/semantic-scribunto": "2.2.0",
     "mediawiki/maps": "10.2.0",
     "mediawiki/chameleon-skin": "4.4.2",
-    "mediawiki/data-transfer": "1.39.0",
-    "mediawiki/login-notify": "1.39.0",
-    "mediawiki/semantic-acl": "1.41.0",
+    "mediawiki/data-transfer": "1.35",
+    "mediawiki/login-notify": "1.35",
+    "mediawiki/semantic-acl": "1.35",
     "mediawiki/semantic-drilldown": "4.0.0-beta3",
-    "mediawiki/regex-functions": "1.39.0",
-    "mediawiki/echo": "1.39.0",
-    "mediawiki/code-mirror": "1.39.0",
-    "mediawiki/wiki-seo": "1.39.0",
-    "mediawiki/VEForAll": "1.42.0"
+    "mediawiki/regex-functions": "1.35",
+    "mediawiki/echo": "1.35",
+    "mediawiki/code-mirror": "1.35",
+    "mediawiki/wiki-seo": "1.35",
+    "mediawiki/VEForAll": "1.35"
   },
   "repositories": [
     {
@@ -29,15 +29,15 @@
       "package": {
         "name": "mediawiki/data-transfer",
         "type": "mediawiki-extension",
-        "version": "1.39.0",
+        "version": "1.35",
         "dist": {
-          "url": "https://github.com/wikimedia/mediawiki-extensions-DataTransfer/archive/REL1_39.zip",
+          "url": "https://github.com/wikimedia/mediawiki-extensions-DataTransfer/archive/REL1_35.zip",
           "type": "zip"
         },
         "source": {
           "type": "git",
           "url": "https://github.com/wikimedia/mediawiki-extensions-DataTransfer.git",
-          "reference": "REL1_39"
+          "reference": "REL1_35"
         }
       }
     },
@@ -46,15 +46,15 @@
       "package": {
         "name": "mediawiki/VEForAll",
         "type": "mediawiki-extension",
-        "version": "1.42.0",
+        "version": "1.35",
         "dist": {
-          "url": "https://github.com/wikimedia/mediawiki-extensions-VEForAll/archive/REL1_42.zip",
+          "url": "https://github.com/wikimedia/mediawiki-extensions-VEForAll/archive/REL1_35.zip",
           "type": "zip"
         },
         "source": {
           "type": "git",
           "url": "https://github.com/wikimedia/mediawiki-extensions-VEForAll.git",
-          "reference": "REL1_42"
+          "reference": "REL1_35"
         }
       }
     },
@@ -63,15 +63,15 @@
       "package": {
         "name": "mediawiki/wiki-seo",
         "type": "mediawiki-extension",
-        "version": "1.39.0",
+        "version": "1.35",
         "dist": {
-          "url": "https://github.com/wikimedia/mediawiki-extensions-WikiSEO/archive/REL1_39.zip",
+          "url": "https://github.com/wikimedia/mediawiki-extensions-WikiSEO/archive/REL1_35.zip",
           "type": "zip"
         },
         "source": {
           "type": "git",
           "url": "https://github.com/wikimedia/mediawiki-extensions-WikiSEO.git",
-          "reference": "REL1_39"
+          "reference": "REL1_35"
         }
       }
     },
@@ -80,15 +80,15 @@
       "package": {
         "name": "mediawiki/login-notify",
         "type": "mediawiki-extension",
-        "version": "1.39.0",
+        "version": "1.35.0",
         "dist": {
-          "url": "https://github.com/wikimedia/mediawiki-extensions-LoginNotify/archive/REL1_39.zip",
+          "url": "https://github.com/wikimedia/mediawiki-extensions-LoginNotify/archive/REL1_35.zip",
           "type": "zip"
         },
         "source": {
           "type": "git",
           "url": "https://github.com/wikimedia/mediawiki-extensions-LoginNotify.git",
-          "reference": "REL1_39"
+          "reference": "REL1_35"
         }
       }
     },
@@ -97,15 +97,15 @@
       "package": {
         "name": "mediawiki/semantic-acl",
         "type": "mediawiki-extension",
-        "version": "1.41.0",
+        "version": "1.35",
         "dist": {
-          "url": "https://github.com/wikimedia/mediawiki-extensions-SemanticACL/archive/REL1_41.zip",
+          "url": "https://github.com/wikimedia/mediawiki-extensions-SemanticACL/archive/REL1_35.zip",
           "type": "zip"
         },
         "source": {
           "type": "git",
           "url": "https://github.com/wikimedia/mediawiki-extensions-SemanticACL.git",
-          "reference": "REL1_41"
+          "reference": "REL1_35"
         }
       }
     },
@@ -131,15 +131,15 @@
       "package": {
         "name": "mediawiki/regex-functions",
         "type": "mediawiki-extension",
-        "version": "1.39.0",
+        "version": "1.35",
         "dist": {
-          "url": "https://github.com/wikimedia/mediawiki-extensions-RegexFunctions/archive/REL1_39.zip",
+          "url": "https://github.com/wikimedia/mediawiki-extensions-RegexFunctions/archive/REL1_35.zip",
           "type": "zip"
         },
         "source": {
           "type": "git",
           "url": "https://github.com/wikimedia/mediawiki-extensions-RegexFunctions.git",
-          "reference": "REL1_39"
+          "reference": "REL1_35"
         }
       }
     },
@@ -148,15 +148,15 @@
       "package": {
         "name": "mediawiki/echo",
         "type": "mediawiki-extension",
-        "version": "1.39.0",
+        "version": "1.35",
         "dist": {
-          "url": "https://github.com/wikimedia/mediawiki-extensions-Echo/archive/REL1_39.zip",
+          "url": "https://github.com/wikimedia/mediawiki-extensions-Echo/archive/REL1_35.zip",
           "type": "zip"
         },
         "source": {
           "type": "git",
           "url": "https://github.com/wikimedia/mediawiki-extensions-Echo.git",
-          "reference": "REL1_39"
+          "reference": "REL1_35"
         }
       }
     },
@@ -165,15 +165,15 @@
       "package": {
         "name": "mediawiki/code-mirror",
         "type": "mediawiki-extension",
-        "version": "1.39.0",
+        "version": "1.35",
         "dist": {
-          "url": "https://github.com/wikimedia/mediawiki-extensions-CodeMirror/archive/REL1_39.zip",
+          "url": "https://github.com/wikimedia/mediawiki-extensions-CodeMirror/archive/REL1_35.zip",
           "type": "zip"
         },
         "source": {
           "type": "git",
           "url": "https://github.com/wikimedia/mediawiki-extensions-CodeMirror.git",
-          "reference": "REL1_39"
+          "reference": "REL1_35"
         }
       }
     }

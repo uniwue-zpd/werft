@@ -1,0 +1,8 @@
+services:
+  base:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        TAG: ${VERSION}
+    image: "uniwuezpd/smw-base:${VERSION}"

@@ -1,0 +1,12 @@
+{
+  "config": {
+    "preferred-install": "source",
+    "optimize-autoloader": true,
+    "allow-plugins": {
+      "composer/installers": true
+    }
+  },
+  "require": {
+    "mediawiki/semantic-media-wiki": "3.1.1"
+  }
+}

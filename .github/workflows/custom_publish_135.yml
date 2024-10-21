@@ -1,0 +1,45 @@
+name: ZIP and Publish Custom Images
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'images/1.35/custom/**'
+
+jobs:
+  zip-and-release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Create ZIP file
+        run: |
+          cd images
+          zip -r custom.zip custom
+
+      - name: Get current date
+        id: date
+        run: echo "::set-output name=date::$(date +'%s')"
+
+      - name: Create Release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: custom-${{ steps.date.outputs.date }}
+          release_name: ${{ steps.date.outputs.date }}
+          body: Automatically generated archive containing all files to setup a custom containerized Semantic MediaWiki instance.
+          draft: false
+          prerelease: false
+
+      - name: Upload Release Asset
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ./images/custom.zip
+          asset_name: custom.zip
+          asset_content_type: application/zip
