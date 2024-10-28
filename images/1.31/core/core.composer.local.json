@@ -18,9 +18,27 @@
     "mediawiki/regex-functions": "1.31",
     "mediawiki/code-mirror": "1.31",
     "mediawiki/visual-editor": "1.31",
-    "mediawiki/VEForAll": "1.31"
+    "mediawiki/VEForAll": "1.31",
+    "mediawiki/Tweeki": "1.31"
   },
   "repositories": [
+    {
+      "type": "package",
+      "package": {
+        "name": "mediawiki/Tweeki",
+        "type": "mediawiki-skin",
+        "version": "1.31",
+        "dist": {
+          "url": "https://github.com/thaider/Tweeki/archive/REL1_31.zip",
+          "type": "zip"
+        },
+        "source": {
+          "type": "git",
+          "url": "https://github.com/thaider/Tweeki.git",
+          "reference": "REL1_31"
+        }
+      }
+    },
     {
       "type": "package",
       "package": {
