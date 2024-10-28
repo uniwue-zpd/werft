@@ -1,8 +1,25 @@
 #!/bin/bash
 set -e
 
+# Setup environment
+env >> /etc/environment
+
+# Ensure script permissions
+chmod 755 -R /usr/local/bin/maintenance
+
+# Ensure log file exists and has proper permissions
+touch /var/log/cron.log
+chmod 0644 /var/log/cron.log
+
+# Ensure proper ownership of MediaWiki directories
+chown -R www-data:www-data /var/www/html
+
 if [ -f /var/www/html/LocalSettings.php ] && [ ! -f /var/www/html/extensions/SemanticMediaWiki/.smw.json ]; then
     php /var/www/html/maintenance/update.php --skip-external-dependencies --quick
+
+    # Start cron in background
+    cron
 fi
 
-apachectl -D FOREGROUND
+# Start apache in foreground
+exec apachectl -D FOREGROUND

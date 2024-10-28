@@ -1,3 +1,3 @@
 #!/bin/bash
-echo "[$(date +%T)] Running jobs in queue" >> /wiki-debug.log
+echo "[$(date +%T)] Running jobs in queue" >> /var/log/cron.log
 /usr/local/bin/php /var/www/html/maintenance/runJobs.php --maxjobs 500 --memory-limit 150M

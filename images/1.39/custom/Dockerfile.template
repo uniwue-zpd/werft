@@ -13,7 +13,7 @@ WORKDIR /var/www/html/extensions
 
 ## Copy scripts
 ADD scripts /usr/local/bin
-RUN chmod 755 /usr/local/bin/*
+RUN chmod 755 /usr/local/bin/runWiki
 
 ## Copy crontab
 COPY crontab /etc/cron.d/smw-cron

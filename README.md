@@ -25,8 +25,8 @@ To find out how to do this and how to add custom repositories you can have a loo
 #### PHP
 To overwrite the initial PHP configuration or to add additional configurations just add them to the `php.ini` file.
 
-#### Maintannce tasks and backups
-The setup will start an additional helper container for running (Semantic) MediaWiki maintenance tasks via cron. 
+#### Maintenance tasks and backups
+Maintenance scripts are running as cron jobs in the main Semantic MediaWiki container.
 To configure the intervals just edit the corresponding line in the `crontab` file or add additional tasks to it.
 These will then be automatically be scheduled at container startup. Make sure to rebuild so that your changes take effect.
 
@@ -35,11 +35,11 @@ The default tasks are:
 - [`rebuildData`](https://www.semantic-mediawiki.org/wiki/Help:Maintenance_script_rebuildData.php)
 - [`dumpBackup`](https://www.mediawiki.org/wiki/Manual:DumpBackup.php)
 
-The provided setup also adds a database backup container by default. To configure the database backup invervals edit the corresponding environment variables.
+The provided setup also adds a database backup container by default. To configure the database backup intervals edit the corresponding environment variables.
 
 #### Environment variables
 The setup depends on certain environment variables being set for building the images and running the containers.
-Adjust the `.env` to match your desired configuration (if you want to use a different filename you have to specifiy this in the docker-compose call with the `--env-file` argument)
+Adjust the `.env` to match your desired configuration (if you want to use a different filename you have to specify this in the docker-compose call with the `--env-file` argument)
 ##### Semantic MediaWiki
 - `SMW_IMAGE_NAME`: Desired name for the custom image (**required**)
 - `SMW_IMAGE_TAG`: Specifies the core image tag that should get used for building (default: `1.39.7`) 
@@ -62,7 +62,7 @@ If you don't want to start an instance from scratch but from the backup of an ex
 ```
 
 ### Installation
-If you have configured everything accordingly run the following commands while inside the `custom` directoy:
+If you have configured everything accordingly run the following commands while inside the `custom` directory:
 
 #### Build your custom image
 ```

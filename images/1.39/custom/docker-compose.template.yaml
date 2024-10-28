@@ -19,19 +19,6 @@ services:
       - database
     restart: always
     entrypoint: ["runWiki"]
-  smw-cron:
-    image: "uniwuezpd/${SMW_IMAGE_NAME:?error}:${SMW_IMAGE_TAG:-1.39.10}"
-    links:
-      - database
-    volumes:
-      - ./backup:/backup
-      # After initial setup, download LocalSettings.php to this repo and uncomment the following line
-      # use docker-compose to restart the mediawiki service
-      # - ./LocalSettings.php:/var/www/html/LocalSettings.php
-    depends_on:
-      - smw
-    restart: always
-    entrypoint: ["cron", "-f"]
   database:
     image: mariadb:11.1.4
     environment:
@@ -52,7 +39,7 @@ services:
       MYSQL_PASSWORD: "${DB_PASSWORD:?error}"
       MYSQL_RANDOM_ROOT_PASSWORD: 'yes'
       CRON_INTERVAL: "${DB_BACKUP_CRON:-00 23 * * *}"
-    entrypoint: [ "sh", "/scripts/run.sh" ]
+    entrypoint: [ "sh", "/scripts/runWiki.sh" ]
     volumes:
       - ./db_data:/var/lib/mysql
       - ./backup:/backup
