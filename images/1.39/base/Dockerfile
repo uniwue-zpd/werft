@@ -12,7 +12,7 @@ LABEL vendor='Zentrum für Philologie und Digitalität "Kallimachos"' \
       maintainer='Maximilian Nöth <maximilian.noeth@uni-wuerzburg.de>'
 
 RUN apt-get update
-RUN apt-get install -y zip unzip wget cron
+RUN apt-get install -y zip unzip wget cron redis-server php-redis
 
 # Setup Composer
 COPY --from=composer:2.1 /usr/bin/composer /usr/bin/composer
