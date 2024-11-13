@@ -1,0 +1,7 @@
+smw:
+  links:
+    -redis
+redis:
+  image: redis:7.4.1
+  restart: always
+  command: ["redis-server", "--appendonly", "no", "--maxmemory", "500mb", "--maxmemory-policy", "allkeys-lru"]
