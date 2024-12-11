@@ -21,7 +21,7 @@ services:
     restart: always
     entrypoint: ["runWiki"]
   database:
-    image: mariadb:11.1.4
+    image: mariadb:11.4
     environment:
       MYSQL_DATABASE: "${DB_NAME:?error}"
       MYSQL_USER: "${DB_USER:?error}"
@@ -33,8 +33,9 @@ services:
       # - ./backup.sql:/docker-entrypoint-initdb.d/datadump.sql
     restart: always
   database-backup:
-    image: uniwuezpd/mariadb-backup:11.1.4
+    image: uniwuezpd/mariadb-backup:11.4
     environment:
+      MYSQL_HOST: "${DB_HOST:-database}"
       MYSQL_DATABASE: "${DB_NAME:?error}"
       MYSQL_USER: "${DB_USER:?error}"
       MYSQL_PASSWORD: "${DB_PASSWORD:?error}"
@@ -42,7 +43,6 @@ services:
       CRON_INTERVAL: "${DB_BACKUP_CRON:-00 23 * * *}"
     entrypoint: [ "sh", "/scripts/runWiki.sh" ]
     volumes:
-      - ./db_data:/var/lib/mysql
       - ./backup:/backup
     depends_on:
       - database
