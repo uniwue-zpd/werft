@@ -23,7 +23,8 @@
     "mediawiki/wiki-seo": "1.39",
     "mediawiki/VEForAll": "1.42",
     "mediawiki/Tweeki": "4.39.1",
-    "mediawiki/template-styles": "1.39"
+    "mediawiki/template-styles": "^1.39.0",
+    "mediawiki/template-styles-extender": "^1.39.0"
   },
   "repositories": [
     {
@@ -31,15 +32,32 @@
       "package": {
         "name": "mediawiki/template-styles",
         "type": "mediawiki-extension",
-        "version": "4.39.1",
+        "version": "1.39.0",
         "dist": {
-          "url": "https://github.com/thaider/Tweeki/archive/v4.39.1.zip",
+          "url": "https://github.com/wikimedia/mediawiki-extensions-TemplateStyles/archive/wmf/1.39.0-wmf.28.zip",
           "type": "zip"
         },
         "source": {
           "type": "git",
-          "url": "https://github.com/thaider/Tweeki.git",
-          "reference": "v4.39.1"
+          "url": "https://github.com/wikimedia/mediawiki-extensions-TemplateStyles.git",
+          "reference": "REL1_39"
+        }
+      }
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "mediawiki/template-styles-extender",
+        "type": "mediawiki-extension",
+        "version": "1.39.0",
+        "dist": {
+          "url": "https://github.com/octfx/mediawiki-extensions-TemplateStylesExtender/archive/master.zip",
+          "type": "zip"
+        },
+        "source": {
+          "type": "git",
+          "url": "https://github.com/octfx/mediawiki-extensions-TemplateStylesExtender.git",
+          "reference": "REL1_39"
         }
       }
     },
