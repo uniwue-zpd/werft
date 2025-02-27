@@ -22,9 +22,27 @@
     "mediawiki/code-mirror": "1.39",
     "mediawiki/wiki-seo": "1.39",
     "mediawiki/VEForAll": "1.42",
-    "mediawiki/Tweeki": "4.39.1"
+    "mediawiki/Tweeki": "4.39.1",
+    "mediawiki/template-styles": "1.39"
   },
   "repositories": [
+    {
+      "type": "package",
+      "package": {
+        "name": "mediawiki/template-styles",
+        "type": "mediawiki-extension",
+        "version": "4.39.1",
+        "dist": {
+          "url": "https://github.com/thaider/Tweeki/archive/v4.39.1.zip",
+          "type": "zip"
+        },
+        "source": {
+          "type": "git",
+          "url": "https://github.com/thaider/Tweeki.git",
+          "reference": "v4.39.1"
+        }
+      }
+    },
     {
       "type": "package",
       "package": {
