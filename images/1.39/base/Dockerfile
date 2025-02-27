@@ -12,7 +12,8 @@ LABEL vendor='Zentrum für Philologie und Digitalität "Kallimachos"' \
       maintainer='Maximilian Nöth <maximilian.noeth@uni-wuerzburg.de>'
 
 RUN apt-get update
-RUN apt-get install -y zip unzip wget cron redis-server
+RUN apt-get install -y zip unzip wget cron redis-server ghostscript xpdf-utils libldap2-dev
+RUN docker-php-ext-install ldap
 RUN pecl install redis && docker-php-ext-enable redis
 
 # Setup Composer
