@@ -24,7 +24,8 @@
     "mediawiki/VEForAll": "1.42",
     "mediawiki/Tweeki": "4.39.1",
     "mediawiki/template-styles": "^1.39.0",
-    "mediawiki/template-styles-extender": "^1.39.0"
+    "mediawiki/template-styles-extender": "^1.39.0",
+    "mediawiki/pdf-embed": "1.39"
   },
   "repositories": [
     {
@@ -228,6 +229,23 @@
           "type": "git",
           "url": "https://github.com/wikimedia/mediawiki-extensions-CodeMirror.git",
           "reference": "REL1_39"
+        }
+      }
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "mediawiki/pdf-embed",
+        "type": "mediawiki-extension",
+        "version": "1.39",
+        "dist": {
+          "url": "https://github.com/miraheze/PDFEmbed/archive/master.zip",
+          "type": "zip"
+        },
+        "source": {
+          "type": "git",
+          "url": "https://github.com/miraheze/PDFEmbed.git",
+          "reference": "master"
         }
       }
     }
