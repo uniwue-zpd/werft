@@ -239,7 +239,7 @@
         "type": "mediawiki-extension",
         "version": "1.39",
         "dist": {
-          "url": "https://github.com/miraheze/PDFEmbed/archive/master.zip",
+          "url": "https://github.com/miraheze/PDFEmbed/archive/4c99f0d6485e9db57d53ad4643a09e14ad6d508e.zip",
           "type": "zip"
         },
         "source": {
