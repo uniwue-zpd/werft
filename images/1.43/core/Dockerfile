@@ -1,6 +1,6 @@
 ARG TAG=1.43.0
 
-FROM uniwuezpd/smw-base:${TAG}
+FROM ghcr.io/uniwue-zpd/smw-base:${TAG}
 
 LABEL vendor='Zentrum für Philologie und Digitalität "Kallimachos"' \
       maintainer='Maximilian Nöth <maximilian.noeth@uni-wuerzburg.de>'
