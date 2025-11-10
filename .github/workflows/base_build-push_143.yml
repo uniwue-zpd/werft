@@ -1,4 +1,4 @@
-name: "(Base)(1.43) Build and Push Docker Image to Dockerhub"
+name: "[Base][1.43] Build and Push Docker Image to GHCR"
 
 on:
   workflow_dispatch:
@@ -6,38 +6,62 @@ on:
     paths:
       - 'images/1.43/base/**'
 
+env:
+  REGISTRY: ghcr.io
+  IMAGE_NAME: ${{ github.repository_owner }}/smw-base
+
 jobs:
-  read-env-and-run:
+  build-and-push:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+      attestations: write
+      id-token: write
+
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-      - name: Read .env file
-        id: dotenv
-        run: |
-          echo "ENV_VARS<<EOF" >> $GITHUB_OUTPUT
-          cat images/1.39/base/.env >> $GITHUB_OUTPUT
-          echo "EOF" >> $GITHUB_OUTPUT
-      - name: Set environment variables
-        run: |
-          while IFS= read -r line; do
-            if [[ ! "$line" =~ ^#.*$ ]] && [[ ! -z "$line" ]]; then
-              echo "$line" >> $GITHUB_ENV
-            fi
-          done <<< "${{ steps.dotenv.outputs.ENV_VARS }}"
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Extract MediaWiki version from .env file
+        run: echo "MEDIAWIKI_VERSION=$(grep MEDIAWIKI_VERSION images/1.43/base/.env | cut -d '=' -f2)" >> $GITHUB_ENV
+
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v3
+
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
-      - name: Login to Docker Hub
+
+      - name: Log in to the GitHub Container Registry
         uses: docker/login-action@v3
         with:
-          username: ${{ secrets.DOCKERHUB_USERNAME }}
-          password: ${{ secrets.DOCKERHUB_TOKEN }}
-      - name: Build and push
-        uses: docker/build-push-action@v6
+          registry: ${{ env.REGISTRY }}
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Extract metadata (tags, labels) for Docker
+        id: meta
+        uses: docker/metadata-action@v5
         with:
-          platforms: linux/amd64,linux/arm64
+          images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
+          tags: |
+            type=raw,value=${{ env.MEDIAWIKI_VERSION }}
+
+      - name: Build and push Docker image
+        id: push
+        uses: docker/build-push-action@v5
+        with:
           context: images/1.43/base
+          platforms: linux/amd64,linux/arm64
           push: true
-          tags: uniwuezpd/smw-base:${{ env.VERSION }}
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
+          build-args: |
+            MEDIAWIKI_VERSION=${{ env.MEDIAWIKI_VERSION }}
+
+      - name: Generate artifact attestation
+        uses: actions/attest-build-provenance@v2
+        with:
+          subject-name: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME}}
+          subject-digest: ${{ steps.push.outputs.digest }}
+          push-to-registry: true
