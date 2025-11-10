@@ -1,0 +1,24 @@
+{
+  "config": {
+    "preferred-install": "source",
+    "optimize-autoloader": true,
+    "allow-plugins": {
+      "composer/installers": true
+    }
+  },
+  "extra": {
+    "merge-plugin": {
+      "include": [
+        "base.composer.local.json",
+        "core.composer.local.json",
+        "extensions/AbuseFilter/composer.json"
+      ]
+    }
+  },
+  "require": {
+
+  },
+  "repositories": [
+
+  ]
+}
