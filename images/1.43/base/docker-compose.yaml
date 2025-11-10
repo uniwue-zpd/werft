@@ -1,0 +1,9 @@
+services:
+  base:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        MEDIAWIKI_MAJOR_VERSION: ${MEDIAWIKI_MAJOR_VERSION}
+        MEDIAWIKI_VERSION: ${MEDIAWIKI_VERSION}
+    image: "uniwuezpd/smw-base:${MEDIAWIKI_VERSION}"

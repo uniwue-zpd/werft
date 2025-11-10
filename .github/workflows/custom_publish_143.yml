@@ -1,9 +1,9 @@
-name: "(Custom)(1.35) ZIP and Publish Custom Images"
+name: "(Custom)(1.43) ZIP and Publish Custom Images"
 on:
   workflow_dispatch:
   push:
     paths:
-      - 'images/1.35/custom/**'
+      - 'images/1.43/custom/**'
 
 jobs:
   zip-and-release:
@@ -14,7 +14,7 @@ jobs:
 
       - name: Create ZIP file
         run: |
-          cd images/1.35
+          cd images/1.43
           zip -r custom.zip custom
 
       - name: Get current date
@@ -28,7 +28,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           tag_name: ${{ steps.date.outputs.date }}
-          release_name: 1_35-custom-${{ steps.date.outputs.date }}
+          release_name: 1_39-custom-${{ steps.date.outputs.date }}
           body: Automatically generated archive containing all files to setup a custom containerized Semantic MediaWiki instance.
           draft: false
           prerelease: false
@@ -39,6 +39,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./images/1.35/custom.zip
+          asset_path: ./images/1.43/custom.zip
           asset_name: custom.zip
           asset_content_type: application/zip
