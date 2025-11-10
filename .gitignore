@@ -2,18 +2,12 @@
 /docs/node_modules/
 */LocalSettings.php
 
-/images/custom/*
-!/images/custom/composer.local.json
-!/images/custom/crontab
-!/images/custom/scripts
-!/images/custom/docker-compose.template.yaml
-!/images/custom/Dockerfile.template
-!/images/custom/template.env
-!/images/custom/php.ini
-
-/images/mariadb-backup/*
-!/images/mariadb-backup/.env
-!/images/mariadb-backup/scripts
-!/images/mariadb-backup/docker-compose.template.yaml
-!/images/mariadb-backup/Dockerfile
+/images/*/custom/*
+!/images/*/custom/composer.local.json
+!/images/*/custom/crontab
+!/images/*/custom/scripts
+!/images/*/custom/docker-compose.template.yaml
+!/images/*/custom/Dockerfile.template
+!/images/*/custom/template.env
+!/images/*/custom/php.ini
 
