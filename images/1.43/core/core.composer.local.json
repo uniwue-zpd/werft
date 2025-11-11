@@ -9,7 +9,7 @@
   "require": {
     "mediawiki/page-forms": "^6.0",
     "mediawiki/semantic-compound-queries": "~3",
-    "mediawiki/semantic-result-formats": "~5.1",
+    "mediawiki/semantic-result-formats": "1.43-bugfix",
     "mediawiki/semantic-scribunto": "2.3.3",
     "mediawiki/maps": "12.0.0",
     "mediawiki/chameleon-skin": "5.0.1",
@@ -27,6 +27,23 @@
     "mediawiki/pdf-embed": "1.43"
   },
   "repositories": [
+    {
+      "type": "package",
+      "package": {
+        "name": "mediawiki/semantic-result-formats",
+        "type": "mediawiki-extension",
+        "version": "1.43-bugfix",
+        "dist": {
+          "url": "https://github.com/huaj1ng/SemanticResultFormats/archive/issue-910.zip",
+          "type": "zip"
+        },
+        "source": {
+          "type": "git",
+          "url": "https://github.com/huaj1ng/SemanticResultFormats",
+          "reference": "1.43-bugfix"
+        }
+      }
+    },
     {
       "type": "package",
       "package": {
