@@ -1,13 +1,13 @@
 ################################################################################################################
 ##### Base image which build on top of the official MediaWiki-Docker Image and installs Semantic MediaWiki #####
 ################################################################################################################
-FROM php:8.3-apache
+FROM php:8.3.30-apache
 
 LABEL vendor='Zentrum für Philologie und Digitalität "Kallimachos"' \
       maintainer='Maximilian Nöth <maximilian.noeth@uni-wuerzburg.de>'
 
 ARG MEDIAWIKI_MAJOR_VERSION=1.43
-ARG MEDIAWIKI_VERSION=1.43.5
+ARG MEDIAWIKI_VERSION=1.43.6
 
 ENV MEDIAWIKI_MAJOR_VERSION=${MEDIAWIKI_MAJOR_VERSION}
 ENV MEDIAWIKI_VERSION=${MEDIAWIKI_VERSION}
