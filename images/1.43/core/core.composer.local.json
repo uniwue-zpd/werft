@@ -16,7 +16,7 @@
     "mediawiki/data-transfer": "1.43",
     "mediawiki/login-notify": "1.43",
     "mediawiki/semantic-acl": "1.45",
-    "mediawiki/semantic-drilldown": "4.0.0-beta3",
+    "mediawiki/semantic-drilldown": "dev-master",
     "mediawiki/regex-functions": "1.43",
     "mediawiki/code-mirror": "1.43",
     "mediawiki/wiki-seo": "1.43",
@@ -168,7 +168,7 @@
       "package": {
         "name": "mediawiki/semantic-drilldown",
         "type": "mediawiki-extension",
-        "version": "4.0.0-beta3",
+        "version": "dev-master",
         "dist": {
           "url": "https://github.com/SemanticMediaWiki/SemanticDrilldown/archive/master.zip",
           "type": "zip"
@@ -176,7 +176,7 @@
         "source": {
           "type": "git",
           "url": "https://github.com/SemanticMediaWiki/SemanticDrilldown.git",
-          "reference": "4.0.0-beta3"
+          "reference": "dev-master"
         }
       }
     },
