@@ -7,6 +7,6 @@
     }
   },
   "require": {
-    "mediawiki/semantic-media-wiki": "6.0.1"
+    "mediawiki/semantic-media-wiki": "7.0.0"
   }
 }
