@@ -27,7 +27,7 @@ RUN set -eux; \
         ghostscript \
         xpdf-utils \
         libldap2-dev \
-		# Required for SyntaxHighlighting
+		# Required for SyntaxHighlighting \
 		python3 \
 	; \
 	rm -rf /var/lib/apt/lists/*
@@ -125,7 +125,7 @@ RUN set -eux; \
 	curl -fSL "https://releases.wikimedia.org/mediawiki/${MEDIAWIKI_MAJOR_VERSION}/mediawiki-${MEDIAWIKI_VERSION}.tar.gz" -o mediawiki.tar.gz; \
 	curl -fSL "https://releases.wikimedia.org/mediawiki/${MEDIAWIKI_MAJOR_VERSION}/mediawiki-${MEDIAWIKI_VERSION}.tar.gz.sig" -o mediawiki.tar.gz.sig; \
 	export GNUPGHOME="$(mktemp -d)"; \
-	# gpg key from https://www.mediawiki.org/keys/keys.txt
+	# gpg key from https://www.mediawiki.org/keys/keys.txt \
 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys \
 		D7D6767D135A514BEB86E9BA75682B08E8A3FEC4 \
 		441276E9CCD15F44F6D97D18C119E1A64D70938E \
