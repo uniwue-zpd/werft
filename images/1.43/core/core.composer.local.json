@@ -11,12 +11,12 @@
     "mediawiki/semantic-compound-queries": "~3",
     "mediawiki/semantic-result-formats": "5.2.0",
     "mediawiki/semantic-scribunto": "2.3.3",
-    "mediawiki/maps": "12.0.0",
-    "mediawiki/chameleon-skin": "5.0.1",
+    "mediawiki/maps": "13.0.0",
+    "mediawiki/chameleon-skin": "5.0.3",
     "mediawiki/data-transfer": "1.43",
     "mediawiki/login-notify": "1.43",
     "mediawiki/semantic-acl": "1.45",
-    "mediawiki/semantic-drilldown": "dev-master",
+    "mediawiki/semantic-drilldown": "5.0.2",
     "mediawiki/regex-functions": "1.43",
     "mediawiki/code-mirror": "1.43",
     "mediawiki/wiki-seo": "1.43",
@@ -34,7 +34,7 @@
         "type": "mediawiki-extension",
         "version": "1.43.0",
         "dist": {
-          "url": "https://github.com/wikimedia/mediawiki-extensions-TemplateStyles/archive/wmf/1.43.0-wmf.11.zip",
+          "url": "https://github.com/wikimedia/mediawiki-extensions-TemplateStyles/archive/wmf/1.43.0-wmf.28.zip",
           "type": "zip"
         },
         "source": {
@@ -49,15 +49,15 @@
       "package": {
         "name": "mediawiki/template-styles-extender",
         "type": "mediawiki-extension",
-        "version": "2.1.0",
+        "version": "2.2.0",
         "dist": {
-          "url": "https://github.com/octfx/mediawiki-extensions-TemplateStylesExtender/archive/refs/tags/v2.1.0.zip",
+          "url": "https://github.com/octfx/mediawiki-extensions-TemplateStylesExtender/archive/refs/tags/v2.2.0.zip",
           "type": "zip"
         },
         "source": {
           "type": "git",
           "url": "https://github.com/octfx/mediawiki-extensions-TemplateStylesExtender.git",
-          "reference": "2.1.0"
+          "reference": "2.2.0"
         }
       }
     },
@@ -168,15 +168,15 @@
       "package": {
         "name": "mediawiki/semantic-drilldown",
         "type": "mediawiki-extension",
-        "version": "dev-master",
+        "version": "5.0.2",
         "dist": {
-          "url": "https://github.com/SemanticMediaWiki/SemanticDrilldown/archive/master.zip",
+          "url": "https://github.com/SemanticMediaWiki/SemanticDrilldown/archive/refs/tags/5.0.2.zip",
           "type": "zip"
         },
         "source": {
           "type": "git",
           "url": "https://github.com/SemanticMediaWiki/SemanticDrilldown.git",
-          "reference": "dev-master"
+          "reference": "5.0.2"
         }
       }
     },
