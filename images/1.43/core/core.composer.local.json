@@ -21,7 +21,7 @@
     "mediawiki/code-mirror": "1.43",
     "mediawiki/wiki-seo": "1.43",
     "mediawiki/ve-for-all": "1.43",
-    "mediawiki/Tweeki": "5.43.1",
+    "mediawiki/tweeki": "5.43.1",
     "mediawiki/template-styles": "^1.43.0",
     "mediawiki/template-styles-extender": "^2.1.0",
     "mediawiki/pdf-embed": "1.43"
@@ -64,7 +64,7 @@
     {
       "type": "package",
       "package": {
-        "name": "mediawiki/Tweeki",
+        "name": "mediawiki/tweeki",
         "type": "mediawiki-skin",
         "version": "5.43.1",
         "dist": {
