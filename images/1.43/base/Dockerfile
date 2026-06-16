@@ -80,7 +80,7 @@ RUN set -eux; \
 	rm -rf /var/lib/apt/lists/*
 
 # Setup Composer
-COPY --from=composer:2.1 /usr/bin/composer /usr/bin/composer
+COPY --from=composer:2.2.28 /usr/bin/composer /usr/bin/composer
 ENV COMPOSER_HOME=/tmp
 
 # Enable Short URLs
