@@ -20,7 +20,7 @@
     "mediawiki/regex-functions": "1.43",
     "mediawiki/code-mirror": "1.43",
     "mediawiki/wiki-seo": "1.43",
-    "mediawiki/VEForAll": "1.43",
+    "mediawiki/ve-for-all": "1.43",
     "mediawiki/Tweeki": "5.43.1",
     "mediawiki/template-styles": "^1.43.0",
     "mediawiki/template-styles-extender": "^2.1.0",
@@ -98,7 +98,7 @@
     {
       "type": "package",
       "package": {
-        "name": "mediawiki/VEForAll",
+        "name": "mediawiki/ve-for-all",
         "type": "mediawiki-extension",
         "version": "1.43",
         "dist": {
