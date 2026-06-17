@@ -21,7 +21,7 @@
     "mediawiki/code-mirror": "1.43",
     "mediawiki/wiki-seo": "1.43",
     "mediawiki/ve-for-all": "1.43",
-    "mediawiki/tweeki": "5.43.1",
+    "mediawiki/tweeki": "5.43.2",
     "mediawiki/template-styles": "^1.43.0",
     "mediawiki/template-styles-extender": "^2.1.0",
     "mediawiki/pdf-embed": "1.43"
@@ -66,15 +66,15 @@
       "package": {
         "name": "mediawiki/tweeki",
         "type": "mediawiki-skin",
-        "version": "5.43.1",
+        "version": "5.43.2",
         "dist": {
-          "url": "https://github.com/thaider/Tweeki/archive/v5.43.1.zip",
+          "url": "https://github.com/thaider/Tweeki/archive/v5.43.2.zip",
           "type": "zip"
         },
         "source": {
           "type": "git",
           "url": "https://github.com/thaider/Tweeki.git",
-          "reference": "5.43.1"
+          "reference": "5.43.2"
         }
       }
     },
