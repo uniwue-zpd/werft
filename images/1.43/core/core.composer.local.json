@@ -32,7 +32,7 @@
       "package": {
         "name": "mediawiki/semantic-result-formats",
         "type": "mediawiki-extension",
-        "version": "mater",
+        "version": "master",
         "dist": {
           "url": "https://github.com/SemanticMediaWiki/SemanticResultFormats/archive/master.zip",
           "type": "zip"
