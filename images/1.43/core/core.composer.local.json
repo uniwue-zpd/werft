@@ -9,7 +9,7 @@
   "require": {
     "mediawiki/page-forms": "^6.0",
     "mediawiki/semantic-compound-queries": "~3",
-    "mediawiki/semantic-result-formats": "5.2.0",
+    "mediawiki/semantic-result-formats": "master",
     "mediawiki/semantic-scribunto": "2.3.3",
     "mediawiki/maps": "13.0.0",
     "mediawiki/chameleon-skin": "5.0.3",
@@ -27,6 +27,23 @@
     "mediawiki/pdf-embed": "1.43"
   },
   "repositories": [
+    {
+      "type": "package",
+      "package": {
+        "name": "mediawiki/semantic-result-formats",
+        "type": "mediawiki-extension",
+        "version": "mater",
+        "dist": {
+          "url": "https://github.com/SemanticMediaWiki/SemanticResultFormats/archive/master.zip",
+          "type": "zip"
+        },
+        "source": {
+          "type": "git",
+          "url": "https://github.com/SemanticMediaWiki/SemanticResultFormats",
+          "reference": "master"
+        }
+      }
+    },
     {
       "type": "package",
       "package": {
