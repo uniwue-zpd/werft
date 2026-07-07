@@ -24,7 +24,8 @@
     "mediawiki/tweeki": "5.43.2",
     "mediawiki/template-styles": "^1.43.0",
     "mediawiki/template-styles-extender": "^2.1.0",
-    "mediawiki/pdf-embed": "1.43"
+    "mediawiki/pdf-embed": "1.43",
+    "mediawiki/lockdown": "1.43"
   },
   "repositories": [
     {
@@ -244,6 +245,23 @@
         "source": {
           "type": "git",
           "url": "https://github.com/miraheze/PDFEmbed.git",
+          "reference": "master"
+        }
+      }
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "mediawiki/lockdown",
+        "type": "mediawiki-extension",
+        "version": "1.43",
+        "dist": {
+          "url": "https://github.com/wikimedia/mediawiki-extensions-Lockdown/archive/REL1_43.zip",
+          "type": "zip"
+        },
+        "source": {
+          "type": "git",
+          "url": "https://github.com/wikimedia/mediawiki-extensions-Lockdown.git",
           "reference": "master"
         }
       }
