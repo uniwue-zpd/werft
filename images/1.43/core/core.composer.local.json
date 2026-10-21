@@ -7,6 +7,7 @@
     }
   },
   "require": {
+    "wikimedia/css-sanitizer": "^6.2.1",
     "mediawiki/page-forms": "^6.0",
     "mediawiki/semantic-compound-queries": "~3",
     "mediawiki/semantic-result-formats": "6.0.0",
