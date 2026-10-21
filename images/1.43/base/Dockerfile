@@ -1,7 +1,7 @@
 ################################################################################################################
 ##### Base image which build on top of the official MediaWiki-Docker Image and installs Semantic MediaWiki #####
 ################################################################################################################
-FROM php:8.3.30-apache
+FROM php:8.3.36-apache
 
 LABEL vendor='Zentrum für Philologie und Digitalität "Kallimachos"' \
       maintainer='Maximilian Nöth <maximilian.noeth@uni-wuerzburg.de>'
