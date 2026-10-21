@@ -1,4 +1,4 @@
-ARG TAG=1.43.8
+ARG TAG=1.43.10
 
 FROM ghcr.io/uniwue-zpd/smw-base:${TAG}
 
