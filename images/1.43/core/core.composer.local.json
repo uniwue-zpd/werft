@@ -9,7 +9,7 @@
   "require": {
     "wikimedia/css-sanitizer": "^6.2.1",
     "mediawiki/page-forms": "^6.0",
-    "mediawiki/semantic-compound-queries": "~3",
+    "mediawiki/semantic-compound-queries": "4.0.1",
     "mediawiki/semantic-result-formats": "6.0.0",
     "mediawiki/semantic-scribunto": "3.0.0",
     "mediawiki/maps": "14.1.1",
