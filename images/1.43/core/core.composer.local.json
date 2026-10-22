@@ -208,14 +208,17 @@
         "name": "mediawiki/pdf-embed",
         "type": "mediawiki-extension",
         "version": "1.43",
+        "extra": {
+          "installer-name": "PDFEmbed"
+        },
         "dist": {
-          "url": "https://github.com/miraheze/PDFEmbed/archive/master.zip",
+          "url": "https://github.com/miraheze/PDFEmbed/archive/189eba58d7289d8351c7390e5ad734ec14fa18dd.zip",
           "type": "zip"
         },
         "source": {
           "type": "git",
           "url": "https://github.com/miraheze/PDFEmbed.git",
-          "reference": "master"
+          "reference": "189eba58d7289d8351c7390e5ad734ec14fa18dd"
         }
       }
     },
