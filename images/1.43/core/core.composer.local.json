@@ -10,7 +10,7 @@
     "wikimedia/css-sanitizer": "^6.2.1",
     "mediawiki/page-forms": "^6.0",
     "mediawiki/semantic-compound-queries": "4.0.1",
-    "mediawiki/semantic-result-formats": "dev-master#36343e9f3ff5b377442ad81ce74dfabc31728332",
+    "mediawiki/semantic-result-formats": "dev-datatables-use-newSelectQueryBuilder",
     "mediawiki/semantic-scribunto": "3.0.0",
     "mediawiki/maps": "14.1.1",
     "mediawiki/chameleon-skin": "5.0.3",
@@ -29,6 +29,45 @@
     "mediawiki/lockdown": "1.43"
   },
   "repositories": [
+    {
+      "type": "package",
+      "package": {
+        "name": "mediawiki/semantic-result-formats",
+        "type": "mediawiki-extension",
+        "version": "dev-datatables-use-newSelectQueryBuilder",
+        "license": "GPL-2.0-or-later",
+        "dist": {
+          "url": "https://github.com/Knowledge-Wiki/SemanticResultFormats/archive/fac2143e3d0ed12072b1572cfaa832f05bf16c7c.zip",
+          "type": "zip",
+          "reference": "fac2143e3d0ed12072b1572cfaa832f05bf16c7c"
+        },
+        "source": {
+          "type": "git",
+          "url": "https://github.com/Knowledge-Wiki/SemanticResultFormats.git",
+          "reference": "fac2143e3d0ed12072b1572cfaa832f05bf16c7c"
+        },
+        "require": {
+          "php": ">=8.2",
+          "composer/installers": ">=1.0.1",
+          "nicmart/tree": "^0.4.0",
+          "data-values/geo": "~4.0"
+        },
+        "autoload": {
+          "psr-4": {
+            "SRF\\": "src/"
+          },
+          "files": [
+            "SemanticResultFormats.php"
+          ],
+          "classmap": [
+            "formats/",
+            "SemanticResultFormats.hooks.php",
+            "SemanticResultFormats.parser.php",
+            "SemanticResultFormats.utils.php"
+          ]
+        }
+      }
+    },
     {
       "type": "package",
       "package": {
