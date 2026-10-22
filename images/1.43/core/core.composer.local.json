@@ -10,7 +10,7 @@
     "wikimedia/css-sanitizer": "^6.2.1",
     "mediawiki/page-forms": "^6.0",
     "mediawiki/semantic-compound-queries": "4.0.1",
-    "mediawiki/semantic-result-formats": "6.0.0",
+    "mediawiki/semantic-result-formats": "dev-master#36343e9f3ff5b377442ad81ce74dfabc31728332",
     "mediawiki/semantic-scribunto": "3.0.0",
     "mediawiki/maps": "14.1.1",
     "mediawiki/chameleon-skin": "5.0.3",
