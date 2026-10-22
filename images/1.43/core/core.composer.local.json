@@ -32,23 +32,6 @@
     {
       "type": "package",
       "package": {
-        "name": "mediawiki/semantic-result-formats",
-        "type": "mediawiki-extension",
-        "version": "dev-master",
-        "dist": {
-          "url": "https://github.com/SemanticMediaWiki/SemanticResultFormats/archive/master.zip",
-          "type": "zip"
-        },
-        "source": {
-          "type": "git",
-          "url": "https://github.com/SemanticMediaWiki/SemanticResultFormats",
-          "reference": "master"
-        }
-      }
-    },
-    {
-      "type": "package",
-      "package": {
         "name": "mediawiki/template-styles",
         "type": "mediawiki-extension",
         "version": "1.43.0",
@@ -60,23 +43,6 @@
           "type": "git",
           "url": "https://github.com/wikimedia/mediawiki-extensions-TemplateStyles.git",
           "reference": "REL1_43"
-        }
-      }
-    },
-    {
-      "type": "package",
-      "package": {
-        "name": "mediawiki/template-styles-extender",
-        "type": "mediawiki-extension",
-        "version": "2.2.0",
-        "dist": {
-          "url": "https://github.com/octfx/mediawiki-extensions-TemplateStylesExtender/archive/refs/tags/v2.2.0.zip",
-          "type": "zip"
-        },
-        "source": {
-          "type": "git",
-          "url": "https://github.com/octfx/mediawiki-extensions-TemplateStylesExtender.git",
-          "reference": "2.2.0"
         }
       }
     },
