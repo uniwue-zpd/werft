@@ -86,6 +86,9 @@
         "name": "mediawiki/ve-for-all",
         "type": "mediawiki-extension",
         "version": "0.8.1",
+        "extra": {
+          "installer-name": "VEForAll"
+        },
         "dist": {
           "url": "https://github.com/wikimedia/mediawiki-extensions-VEForAll/archive/refs/tags/0.8.1.zip",
           "type": "zip"
