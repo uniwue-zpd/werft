@@ -21,7 +21,7 @@
     "mediawiki/regex-functions": "1.43",
     "mediawiki/code-mirror": "1.43",
     "mediawiki/wiki-seo": "1.43",
-    "mediawiki/ve-for-all": "1.43",
+    "mediawiki/ve-for-all": "0.8.1",
     "mediawiki/tweeki": "dev-master",
     "mediawiki/template-styles": "^1.43.0",
     "octfx/template-styles-extender": "^3.0.0",
@@ -85,15 +85,15 @@
       "package": {
         "name": "mediawiki/ve-for-all",
         "type": "mediawiki-extension",
-        "version": "1.43",
+        "version": "0.8.1",
         "dist": {
-          "url": "https://github.com/wikimedia/mediawiki-extensions-VEForAll/archive/REL1_43.zip",
+          "url": "https://github.com/wikimedia/mediawiki-extensions-VEForAll/archive/refs/tags/0.8.1.zip",
           "type": "zip"
         },
         "source": {
           "type": "git",
           "url": "https://github.com/wikimedia/mediawiki-extensions-VEForAll.git",
-          "reference": "REL1_43"
+          "reference": "0.8.1"
         }
       }
     },
