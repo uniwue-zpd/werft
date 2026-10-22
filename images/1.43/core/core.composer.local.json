@@ -24,7 +24,7 @@
     "mediawiki/ve-for-all": "1.43",
     "mediawiki/tweeki": "5.43.2",
     "mediawiki/template-styles": "^1.43.0",
-    "mediawiki/template-styles-extender": "^3.0.0",
+    "octfx/template-styles-extender": "^3.0.0",
     "mediawiki/pdf-embed": "1.43",
     "mediawiki/lockdown": "1.43"
   },
